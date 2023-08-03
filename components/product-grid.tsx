@@ -8,16 +8,15 @@ import { formatCurrencyString } from "use-shopping-cart"
 import { SanityProduct } from "@/config/inventory"
 import { shimmer, toBase64 } from "@/lib/image"
 
-// interface Props {
-//   products: SanityProduct[]
-// }
+interface Props {
+  products: SanityProduct[]
+}
 
 // export function ProductGrid({ products }: Props) {
-export function ProductGrid({ products }) {
+export function ProductGrid({ products }:Props) {
   console.log(products)
   if (products?.length === 0) {
-    return (
-      <div className="mx-auto grid h-40 w-full place-items-center rounded-md border-2 border-dashed bg-gray-50 py-10 text-center dark:bg-gray-900">
+    return ( <div className="mx-auto grid h-40 w-full place-items-center rounded-md border-2 border-dashed bg-gray-50 py-10 text-center dark:bg-gray-900">
         <div>
           <XCircle className="mx-auto h-10 w-10 text-gray-500 dark:text-gray-200" />
           <h1 className="mt-2 text-xl font-bold tracking-tight text-gray-500 dark:text-gray-200 sm:text-2xl">
