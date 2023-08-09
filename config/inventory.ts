@@ -3,7 +3,7 @@ import { Image } from "sanity"
 interface InventoryProduct {
   id: string
   title: string
-  image: string
+  image: any
   images: string[]
   categories: string[]
   sizes: string[]
@@ -11,14 +11,24 @@ interface InventoryProduct {
   price: number
   currency: string
   description: string
-  sku: string
+  sku: string;
 }
 
 export interface SanityProduct extends Omit<InventoryProduct, "images"> {
-  _id: string
-  _createdAt: Date
-  slug: string
-  images: Image[]
+  _id: string;
+  _createdAt: Date;
+  slug: string;
+  // images: Image_2[];
+  id: string; // Add price_id property if required // Optional if price_id is not always present
+  title: string;
+  image: any;
+  categories: string[];
+  sizes: string[];
+  colors: string[];
+  price: number;
+  currency: string;
+  description: string;
+  sku: string;
 }
 
 // export const inventory: InventoryProduct[] = [

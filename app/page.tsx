@@ -3,10 +3,10 @@ import { groq } from "next-sanity"
 import { SanityProduct } from "@/config/inventory"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { ProductFilters } from "@/components/product-filters"
+// import { ProductFilters } from "@/components/product-filters"
 import { ProductGrid } from "@/components/product-grid"
-import { ProductSort } from "@/components/product-sort"
-import { seedSanityData } from "@/lib/seed"
+// import { ProductSort } from "@/components/product-sort"
+// import { seedSanityData } from "@/lib/seed"
 import { product } from "@/sanity/schemas/product"
 import Image from "next/image"
 import { urlForImage } from "@/sanity/lib/image"
@@ -16,6 +16,7 @@ interface Props {
     date?:string
     price?:string
     category?:string
+    price_id?: any
   }
 }
 
@@ -62,7 +63,7 @@ export default async function Page({searchParams} : Props) {
               {products.length}result{products.length === 1 ? "" : "s"}
             </h1>
             {/* Product Sort */}
-            <ProductSort />
+            {/* <ProductSort /> */}
           </div>
 
           <section aria-labelledby="products-heading" className="pb-24 pt-6">
@@ -71,7 +72,7 @@ export default async function Page({searchParams} : Props) {
             </h2>
             <div className={cn("grid grid-cols-1 gap-x-8 gap-y-10 ", products.length > 0 ? 'lg:grid-cols-4' : 'lg:grid-cols-[1fr_3fr')}>
               <div className="hidden lg:block">
-                <ProductFilters />
+                {/* <ProductFilters /> */}
 
               </div>
               <ProductGrid products={products} />

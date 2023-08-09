@@ -31,7 +31,7 @@ export function ProductGrid({ products }: Props) {
     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-3 lg:gap-x-8">
       {products?.map((product) => (
         <Link href={`/products/${product.slug}`} key={product._id} className="group text-sm">
-          {/* <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg border-2 border-gray-200 bg-gray-100 group-hover:opacity-75 dark:border-gray-800">
+          <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg border-2 border-gray-200 bg-gray-100 group-hover:opacity-75 dark:border-gray-800">
             <Image
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(225, 280))}`}
@@ -41,7 +41,7 @@ export function ProductGrid({ products }: Props) {
               alt="no image found"
               className="h-full w-full object-cover object-center"
             />
-          </div> */}
+          </div>
           <h3 className="mt-4 font-extrabold">{product.title}</h3>
           <p className="mt-2 font-semibold">{product.description}</p>
           <p className="mt-2 font-medium">{product.price}Rs.</p>

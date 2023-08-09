@@ -53,7 +53,7 @@ export function ProductFilters() {
                     key={option.value}
                     className="flex items-center space-x-2"
                   >
-                    <Checkbox id={`filter-${section.id}-${optionIdx}`} 
+                    <Checkbox id={`filter-${section.id}-${optionIdx}` } 
                     checked={searchValues.some(([key, value])=> key === section.id && value === option.value)}
                     onClick={(event) => {
                       const params = new URLSearchParams(searchParams)

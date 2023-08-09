@@ -47,11 +47,11 @@ export const product = defineType({
             title: 'Price',
             type: 'number',
         }),
-        defineField({
-            name: 'SKU',
-            title: 'SKU',
-            type: 'string',
-        }),
+        // defineField({
+        //     name: 'SKU',
+        //     title: 'SKU',
+        //     type: 'string',
+        // }),
         defineField({
             name: 'Currency',
             title: 'Currency',

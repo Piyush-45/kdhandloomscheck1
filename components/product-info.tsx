@@ -14,30 +14,17 @@ interface Props {
   product: SanityProduct
 }
 
-export function ProductInfo({ product }: Props) {
+export function ProductInfo({ product }:Props) {
+ const{addItem} = useShoppingCart()
 
- const{addItem, incrementItem, cartDetails}= useShoppingCart()
- const isInCart = !!cartDetails?.[product._id]
- const { toast } = useToast()
-
-  function addToCart() {
-    const item = { ...product }
-    isInCart ? incrementItem(item._id) : addItem(item)
-    toast({
-      title: `${item.name}`,
-      description: "product added to cart",
-      action:(
-        <Link href='/cart'>
-        <Button variant="link" className="gap-x-2 whitespace-nowrap">
-        <span>Open cart</span>
-        <ArrowRight className="h-5 w-5"/>
-        </Button>
-        </Link>
-      )
-    })
-  
+  function addToCart(){
+    const item = {
+      ...product
+    }
+    addItem(item)
   }
 
+  
   return (
     <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
       <h1 className="text-3xl font-bold tracking-tight">{product.title}</h1>

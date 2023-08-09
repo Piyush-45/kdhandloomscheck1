@@ -14,6 +14,7 @@ import { useToast } from "@sanity/ui"
 
 
 export function SiteHeader() {
+  // console.log(useShoppingCart)
 
   const pathname = usePathname()
   const router = useRouter()

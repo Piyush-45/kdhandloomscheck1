@@ -10,7 +10,7 @@ export function CartSummary() {
   const { totalPrice, cartDetails, cartCount, formattedTotalPrice } = useShoppingCart()
  
   console.log(cartDetails)
-
+// function onCheckOut{}
   return (
     <section
       aria-labelledby="summary-heading"
@@ -32,7 +32,7 @@ export function CartSummary() {
       </dl>
 
       <div className="mt-6">
-        <Button className="w-full">
+        <Button className="w-full" >
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
           Proceed To Pay
         </Button>

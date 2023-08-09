@@ -19,7 +19,7 @@ export default async function Page({params}: Props) {
   "id": _id,
   title,
   sku,
-  image, price, Currency, description, sizes, categories, colors, "slug": slug.current,
+  image, price, Currency, description, sizes, categories, colors, "slug": slug.current,name
   
  }`)
 

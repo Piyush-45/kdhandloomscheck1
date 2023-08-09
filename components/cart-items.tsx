@@ -16,6 +16,7 @@ import { CartItemsEmpty } from "@/components/cart-items-empty"
 
 export function CartItems() {
   const { cartDetails, setItemQuantity } = useShoppingCart()
+  
   const cartItems = Object.entries(cartDetails!).map(([_, product]) => product)
 
 console.log(cartDetails)
